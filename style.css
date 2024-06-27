@@ -75,3 +75,6 @@ body {
     text-decoration: none;
     
   }
+  .icons i{
+    margin: 5px 10px;
+  }
