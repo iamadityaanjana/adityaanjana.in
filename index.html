@@ -12,70 +12,73 @@
 </head>
 <body>
     <div class="main">
-        <div class="left">
+        <div class="left" id="sidebar">
             <div id="profile">
                 <img src="Png.jpeg">
             </div>
             <div id="menu">
-                <div class="home" >
-                <a href="Soon /index.html" >Home</a>
+                <div class="home">
+                    <a href="#home">Home</a>
                 </div>
-                <div class="about-me" >
-                    <a href="Soon /index.html" ">About me</a>
+                <div class="about-me">
+                    <a href="Soon/index.html">About me</a>
                 </div>
-                <div >
-                    <a class="my-work" href="Soon /index.html" >My work</a>
+                <div>
+                    <a class="my-work" href="Soon/index.html">My work</a>
                 </div>
                 <div class="contact">
-                    <a href="Soon /index.html" >Contact me</a>
+                    <a href="Soon/index.html">Contact me</a>
                 </div>
-                
             </div>
             <div>
                 <div class="line"></div>
             </div>
             <div id="current">
-                <p>Current Status : <i id="circle" >AFK</i></p>
+                <p>Current Status : <i id="circle">AFK</i></p>
             </div>
         </div>
         <div class="right">
             <div class="head">
-            <h1>Aditya Anjana</h1>
-            <h3>Full time Student</h3>
+                <h1>Aditya Anjana</h1>
+                <h3>Full time Student</h3>
             </div>
             <div class="para">
                 <p>Welcome to my website <span>👋</span>. I'm a highly motivated student currently pursuing <span class="underline">CSE</span> at Manipal University , Jaipur. I have keen interest in <span class="highlights">Competitive Programming , Machine learning , Data science</span>.
-                I'm here to share my acheivements , projects and fun stuff <span>😎</span>.</p>
+                I'm here to share my achievements , projects and fun stuff <span>😎</span>.</p>
                 <p id="para2">
                     On Daily basis I'm busy with College , Studies and Coding. Weekends include Sleeping , Coding , fun with friends & <span class="strike">Bakchodi</span>. 
                 </p>
-                
             </div>
             <div class="liner"></div>
             <div class="proj">
                 <h1>Projects</h1>
                 <span>Coming soon......</span>
             </div>
-            
         </div>
-</div>
-<script type="module">
-    import { annotate } from 'https://unpkg.com/rough-notation?module';
-    const n = document.querySelector('#circle');
-    const a = annotate(n, { type: 'circle', color: 'red'});
-    a.show();
-    const n1 = document.querySelector('.underline');
-    const a1 = annotate(n1, { type: 'underline', color: 'yellow' , padding: -3
-    });
-    a1.show();
-    const n2 = document.querySelector('.highlights');
-    const a2 = annotate(n2, { type: 'highlight', color: 'lightgreen', iterations: 1, multiline: false
-    });
-    a2.show();
-    const n3 = document.querySelector('.strike');
-    const a3 = annotate(n3, { type: 'strike-through', color: 'red', iterations: 10,strokeWidth:5
-    });
-    a3.show();
-  </script>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <script type="module">
+        import { annotate } from 'https://unpkg.com/rough-notation?module';
+        const n = document.querySelector('#circle');
+        const a = annotate(n, { type: 'circle', color: 'red' });
+        a.show();
+        const n1 = document.querySelector('.underline');
+        const a1 = annotate(n1, { type: 'underline', color: 'yellow', padding: -3 });
+        a1.show();
+        const n2 = document.querySelector('.highlights');
+        const a2 = annotate(n2, { type: 'highlight', color: 'lightgreen', iterations: 1, multiline: true });
+        a2.show();
+        const n3 = document.querySelector('.strike');
+        const a3 = annotate(n3, { type: 'strike-through', color: 'red', iterations: 10, strokeWidth: 5 });
+        a3.show();
+
+        
+    </script>
+    <script>
+        function toggleMenu() {
+            const sidebar = document.querySelector('#sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

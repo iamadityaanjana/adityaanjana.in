@@ -1,75 +1,81 @@
+/* Existing styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  html,
-  body {
+}
+
+html,
+body {
     width: 100%;
     height: 100%;
     font-family: Anybody;
-  }
+}
 
-.main{
+.main {
     height: 100%;
     width: 100%;
-    /* background-color: #dadada; */
     display: grid;
     grid-template-columns: 20% 80%;
 }
 
-.left{
-    /* background-color: aliceblue; */
+.left {
     height: 100%;
     display: grid;
-    grid-template-rows:15% 30% 1% 20% ;
+    grid-template-rows: 15% 30% 1% 20%;
 }
 
-#profile{
+#profile {
     padding: 10px;
-    padding-right:20px ;
+    padding-right: 20px;
     align-items: center;
     justify-self: center;
 }
-#profile img{
+
+#profile img {
     object-fit: content;
     height: 7vw;
     width: 7vw;
     border-radius: 50%;
 }
-#menu{
+
+#menu {
     justify-self: center;
     align-content: center;
 }
-#menu div{
+
+#menu div {
     padding: 13px;
-    cursor:pointer;
+    cursor: pointer;
 }
-#menu a{
+
+#menu a {
     text-decoration: none;
     color: black;
     margin-top: 20px;
     border: 0.5px solid transparent;
     padding: 10px;
-    cursor:pointer;
+    cursor: pointer;
 }
-#menu a:hover{
+
+#menu a:hover {
     padding: 10px;
     border: 0.5px solid rgb(198, 198, 198);
     border-radius: 7px;
     box-shadow: 10px;
 }
 
-#current{
-
+#current {
     justify-self: center;
 }
-#current p{
+
+#current p {
     padding: 20px;
     color: #434242;
 }
-#current p i{
+
+#current p i {
     font-size: 1.4vw;
     font-weight: 500;
 }
@@ -79,47 +85,119 @@
     margin-left: 10%;
     margin-right: 10%;
 }
-.right{
-    /* background-color: bisque; */
+
+.right {
     padding: 20px;
     padding-top: 30px;
     display: grid;
     grid-template-rows: 20% 30% 1% 49%;
 }
-.right h1{
+
+.right h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
 }
-.right h1::first-letter{
+
+.right h1::first-letter {
     font-size: 3.5vw;
     font-weight: 300;
 }
-.right h3{
+
+.right h3 {
     color: rgb(146, 210, 137);
     font-weight: 300;
     font-stretch: extra-condensed;
 }
-.right span{
+
+.right span {
     font-size: 20px;
 }
-.head{
-    /* background-color: blue; */
-}
 
-.para{
+
+
+.para {
     line-height: 2vw;
     margin-right: 25%;
-    /* background-color: aquamarine; */
 }
-#para2{
+
+#para2 {
     margin-top: 5vh;
 }
 
-.liner{
+.liner {
     border-top: 1px solid rgb(221, 221, 221);
     margin-right: 10%;
 }
-.proj span{
+
+.proj span {
     line-height: 75px;
     font-weight: 300;
+}
+
+/* New styles for responsive design */
+
+.menu-icon {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+@media (max-width: 600px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        display: none;
+    }
+    .left#profile{
+        width: 25px;
+        height: 25px;
+    }
+    .left.active {
+        display: grid;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        z-index: 1000;
+    }
+    #current p i {
+        font-size: 6vw;
+        font-weight: 500;
+    }
+    #profile img {
+        object-fit: content;
+        height: 125px;
+        width: 125px;
+        border-radius: 50%;
+        translate: -10px -12px;
+    
+    }
+    .right {
+        grid-template-rows: auto;
+    }
+    .right h1::first-letter {
+        font-size: 15vw;
+        font-weight: 300;
+    }
+    .right h3{
+        margin-top:3px;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .para {
+        margin-top:20px ;
+        line-height: 150%;
+        margin-right: 0;
+    }
+    
+    #para2 {
+        margin-top: 5vh;
+    }
 }
