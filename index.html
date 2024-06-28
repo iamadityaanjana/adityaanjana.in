@@ -3,36 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aditya A.</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="wrapper">
-        <h1>coming <i id="circle" >soon</i><span class="dot">.</span></h1>
-        <br>
-        <div class="icons">
-          <a href="https://x.com/iamadityaanjana" target="_blank"><i class="ic fa fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/in/adityaanjana/" target="_blank"><i class="ic fa fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/iamadityaanjana/" target="_blank"><i class="ic fa fa-instagram"></i></a>
-          <a href="https://github.com/iamadityaanjana" target="_blank"><i class="ic fa fa-github"></i></a>
+    <div class="main">
+        <div class="left">
+            <div id="profile">
+                <img src="Png.jpeg">
+            </div>
+            <div id="menu">
+                <div class="home" >
+                <a href="Soon /index.html" >Home</a>
+                </div>
+                <div class="about-me" >
+                    <a href="Soon /index.html" ">About me</a>
+                </div>
+                <div >
+                    <a class="my-work" href="Soon /index.html" >My work</a>
+                </div>
+                <div class="contact">
+                    <a href="Soon /index.html" >Contact me</a>
+                </div>
+                
+            </div>
+            <div>
+                <div class="line"></div>
+            </div>
+            <div id="current">
+                <p>Current Status : <i id="circle" >AFK</i></p>
+            </div>
         </div>
-       </div>
+        <div class="right">
+            <div class="head">
+            <h1>Aditya Anjana</h1>
+            <h3>Full time Student</h3>
+            </div>
+            <div class="para">
+                <p>Welcome to my website <span>👋</span>. I'm a highly motivated student currently pursuing <span class="underline">CSE</span> at Manipal University , Jaipur. I have keen interest in <span class="highlights">Competitive Programming , Machine learning , Data science</span>.
+                I'm here to share my acheivements , projects and fun stuff <span>😎</span>.</p>
+                <p id="para2">
+                    On Daily basis I'm busy with College , Studies and Coding. Weekends include Sleeping , Coding , fun with friends & <span class="strike">Bakchodi</span>. 
+                </p>
+                
+            </div>
+            <div class="liner"></div>
+            <div class="proj">
+                <h1>Projects</h1>
+                <span>Coming soon......</span>
+            </div>
+            
+        </div>
+</div>
 <script type="module">
-  import { annotate } from 'https://unpkg.com/rough-notation?module';
-  const n2 = document.querySelector('#circle');
-  const a2 = annotate(n2, { type: 'underline', color: 'yellow',padding: -5 });
-  a2.show();
-</script>
+    import { annotate } from 'https://unpkg.com/rough-notation?module';
+    const n = document.querySelector('#circle');
+    const a = annotate(n, { type: 'circle', color: 'red'});
+    a.show();
+    const n1 = document.querySelector('.underline');
+    const a1 = annotate(n1, { type: 'underline', color: 'yellow' , padding: -3
+    });
+    a1.show();
+    const n2 = document.querySelector('.highlights');
+    const a2 = annotate(n2, { type: 'highlight', color: 'lightgreen', iterations: 1, multiline: false
+    });
+    a2.show();
+    const n3 = document.querySelector('.strike');
+    const a3 = annotate(n3, { type: 'strike-through', color: 'red', iterations: 10,strokeWidth:5
+    });
+    a3.show();
+  </script>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-
-</script>
-<script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
-
 </html>
