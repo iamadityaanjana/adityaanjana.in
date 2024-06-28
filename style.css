@@ -46,6 +46,10 @@ body {
     font-weight: normal;
     
   }
+  h1::selection{
+    color:beige;
+  }
+  
   
   .icons {
     text-align: center;
