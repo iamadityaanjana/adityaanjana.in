@@ -60,16 +60,16 @@
     <script type="module">
         import { annotate } from 'https://unpkg.com/rough-notation?module';
         const n = document.querySelector('#circle');
-        const a = annotate(n, { type: 'circle', color: 'red' });
+        const a = annotate(n, { type: 'circle', color: 'red', animationDuration: 2500 });
         a.show();
         const n1 = document.querySelector('.underline');
-        const a1 = annotate(n1, { type: 'underline', color: 'yellow', padding: -3 });
+        const a1 = annotate(n1, { type: 'underline', color: 'yellow', padding: -3, animationDuration: 2500});
         a1.show();
         const n2 = document.querySelector('.highlights');
-        const a2 = annotate(n2, { type: 'highlight', color: 'lightgreen', iterations: 1, multiline: true });
+        const a2 = annotate(n2, { type: 'highlight', color: 'lightgreen', iterations: 1, multiline: true, animationDuration: 2500 });
         a2.show();
         const n3 = document.querySelector('.strike');
-        const a3 = annotate(n3, { type: 'strike-through', color: 'red', iterations: 10, strokeWidth: 5 });
+        const a3 = annotate(n3, { type: 'strike-through', color: 'red', iterations: 10, strokeWidth: 5, animationDuration: 2500 });
         a3.show();
 
         
