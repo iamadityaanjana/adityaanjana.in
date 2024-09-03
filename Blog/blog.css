@@ -114,4 +114,8 @@ img{
     height: 90%;
     width: 75%;
 }
+
+.cursor{
+  display:none;
+}
 }

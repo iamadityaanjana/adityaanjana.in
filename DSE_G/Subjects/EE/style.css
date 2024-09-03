@@ -70,7 +70,6 @@ a:hover{
 
 
 
-
 .cursor {
   position: absolute;
   height: 25px;
@@ -113,5 +112,8 @@ img{
   .main{
     height: 90%;
     width: 75%;
+}
+.cursor{
+  display:none;
 }
 }
