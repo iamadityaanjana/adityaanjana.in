@@ -117,4 +117,7 @@ img{
 .cursor{
   display:none;
 }
+*{
+  font-size:medium;
+}
 }
