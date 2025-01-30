@@ -124,7 +124,7 @@ export const DATA = {
       dates: "Dec 2024 - Jan 2025",
       active: true,
       description:
-        "Built a collaborative notetaking app , supports multiple users at once along with custom cursors to show the activity. Developed ",
+        "Built a collaborative notetaking app , supports multiple users at once along with custom cursors to show the user activity. ",
       technologies: [
         "Next.js",
         "Typescript",
