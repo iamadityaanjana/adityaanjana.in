@@ -91,7 +91,7 @@ export const DATA = {
       href: "https://mitremedia.com/",
       badges: [],
       location: "Remote",
-      title: "Website Devlopeer",
+      title: "Website Devloper",
       logoUrl: "",
       start: "May 2023",
       end: "Ongoing",
