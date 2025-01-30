@@ -67,10 +67,11 @@ export default function RootLayout({
           <TooltipProvider delayDuration={0}>
             {children}
             <Navbar />
+            <SpeedInsights />
+        <Analytics />
           </TooltipProvider>
         </ThemeProvider>
-        <SpeedInsights />
-        <Analytics />
+        
       </body>
     </html>
   );
