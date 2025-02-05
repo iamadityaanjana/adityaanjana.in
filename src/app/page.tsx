@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { Bot } from 'lucide-react';
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -49,6 +50,33 @@ export default function Page() {
           </Markdown>
         </BlurFade>
       </section>
+
+
+      <section className="flex justify-center" >
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
+        <div className="   flex items-center space-x-4">
+        <div className="relative flex items-center">
+          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+          <div className="absolute -inset-1">
+            <div className="w-full h-full bg-green-500 rounded-full animate-ping opacity-25"></div>
+          </div>
+        </div>
+        <div className="flex items-center space-x-2">
+          <span className=" font-medium"></span>
+          <div className="bg-gray-100 px-3 py-1 rounded-full flex items-center space-x-2">
+            
+            <span className="text-sm text-gray-600">Working on AI agents</span>
+            <Bot size={16} className="text-gray-600" />
+          </div>
+        </div>
+      </div>
+        </BlurFade>
+      </section>
+
+
+
+
+
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
