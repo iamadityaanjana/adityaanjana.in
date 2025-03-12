@@ -65,7 +65,7 @@ export default function Page() {
           <span className=" font-medium"></span>
           <div className="bg-gray-100 px-3 py-1 rounded-full flex items-center space-x-2">
             
-            <span className="text-sm text-gray-600">Working on AI agents</span>
+            <span className="text-sm text-gray-600">Learning iOS app development</span>
             <Bot size={16} className="text-gray-600" />
           </div>
         </div>
