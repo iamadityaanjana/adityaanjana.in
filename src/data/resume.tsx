@@ -138,6 +138,80 @@ export const DATA = {
       video: "",
     },
     {
+      title: "SnapChain",
+      href: "https://snapchain.vercel.app/",
+      dates: "April 2025 - July 2025",
+      active: true,
+      description:
+        "Designed, developed a Drag and Drop smart contract builder for Solana with AI integration.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "React",
+        "Solana",
+        "TailwindCSS",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://snapchain.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/Screenshot 2025-05-21 at 10.03.10 PM.png",
+      video: "",
+    },
+{
+      title: "Solana Deploy SDK",
+      href: "https://www.npmjs.com/package/solana-deploy-sdk",
+      dates: "April 2025 - May 2025",
+      active: true,
+      description:
+        "A SDK for deploying Solana smart contracts within a React app and CLI tool for deploying smart contracts.",
+      technologies: [
+        "JavaScript",
+        "Node.js",
+        "TailwindCSS",
+        "Solana",
+        "Web3.js",
+        "SDK"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://www.npmjs.com/package/solana-deploy-sdk",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/1500x500.jpeg",
+      video: "",
+    },
+    {
+      title: "Neural Canvas Playground",
+      href: "https://neural.adityaanjana.in/",
+      dates: "June 2024 - July 2024",
+      active: true,
+      description:
+        "A webapp which lets you visualise your neural networks on various paramenters and models.",
+      technologies: [
+        "React",
+        "Next.js",
+        "Typescript",
+        "TailwindCSS",
+        "Machine Learning",
+        "Neural Networks"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://neural.adityaanjana.in/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/neural.jpeg",
+      video: "",
+    },
+    {
       title: "Chexpert",
       href: "https://github.com/iamadityaanjana/Chexpert-mini",
       dates: "June 2024 - July 2024",
@@ -190,6 +264,7 @@ export const DATA = {
       image: "/iris.png",
       video: "",
     },
+    
     {
       title: "Movie recommendation system",
       href: "https://github.com/iamadityaanjana/Movies_recommend",
