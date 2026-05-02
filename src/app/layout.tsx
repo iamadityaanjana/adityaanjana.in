@@ -1,52 +1,29 @@
-import Navbar from "@/components/navbar";
-import { ThemeProvider } from "@/components/theme-provider";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { DATA } from "@/data/resume";
-import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import {Inter_Tight} from "next/font/google";
 import "./globals.css";
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next"
+import { ThemeProvider } from "@/components/theme-provider"
 
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+const inter = Inter_Tight({
+  weight: '400',
+  style: 'normal',
+  subsets: ['latin']
+})
 
 export const metadata: Metadata = {
-  metadataBase: new URL(DATA.url),
-  title: {
-    default: DATA.name,
-    template: `%s | ${DATA.name}`,
-  },
-  description: DATA.description,
+  title: 'Aditya Anjana',
+  description: 'Software Engineer. I love building things and helping people.',
   openGraph: {
-    title: `${DATA.name}`,
-    description: DATA.description,
-    url: DATA.url,
-    siteName: `${DATA.name}`,
-    locale: "en_US",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  twitter: {
-    title: `${DATA.name}`,
-    card: "summary_large_image",
-  },
-  verification: {
-    google: "",
-    yandex: "",
+    url: 'https://adityaanjana.in/',
+    siteName: 'Aditya Anjana Portfolio',
+    locale: 'en_US',
+    type: 'website',
+    images: [{
+      url: '/me.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Aditya Anjana - Portfolio'
+    }],
   },
 };
 
@@ -57,21 +34,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
-          fontSans.variable
-        )}
-      >
-        <ThemeProvider attribute="class" defaultTheme="light">
-          <TooltipProvider delayDuration={0}>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="relative z-10">
             {children}
-            <Navbar />
-            <SpeedInsights />
-        <Analytics />
-          </TooltipProvider>
+            <Analytics />
+          </div>
         </ThemeProvider>
-        
+        <script
+          src="https://script.refix.ai/script.min.js"
+          type="text/javascript"
+          data-refix-token="c9a48825-4062-464a-941d-c958ddf21a96"
+          defer
+        ></script>
       </body>
     </html>
   );
