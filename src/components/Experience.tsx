@@ -13,8 +13,8 @@ export default function Experience() {
   const experiences: ExperienceItem[] = [
     {
       company: "Kurma",
-      position: "Full-stack Developer",
-      duration: "Sep 2025 – Jan 2026",
+      position: "Co-founder",
+      duration: "Sep 2025 – Present",
       description: `• Building a Flutter app end-to-end, translating product requirements into scalable, high-performance mobile features.
 • Designed and implemented a NestJS backend, handling APIs, business logic, and secure data flows for the mobile application.
 • Architected and managed the Supabase (PostgreSQL) database, including schema design, auth integration, and performance-optimized queries.`,
