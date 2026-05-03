@@ -64,7 +64,7 @@ export default function Home() {
           </div>
           <div className="mt-5 space-y-4">
             <p className="text-base md:text-lg text-neutral-800 dark:text-neutral-200">    
-              <span className="text-cyan-500 dark:text-cyan-400">*</span> Hey, I&apos;m Aditya<span className="text-cyan-500 dark:text-cyan-400">!
+              <span className="text-cyan-500 dark:text-cyan-400">: &#41;</span> Hey, I&apos;m Aditya<span className="text-cyan-500 dark:text-cyan-400"> !!!
               <br />
               </span> I love building things and helping people. Started learning machine learning and AI along with web development in 2023.
               <Link href={"/interests"}> ↗</Link>
