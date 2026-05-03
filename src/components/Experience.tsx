@@ -18,8 +18,8 @@ export default function Experience() {
       description: `• Building a Flutter app end-to-end, translating product requirements into scalable, high-performance mobile features.
 • Designed and implemented a NestJS backend, handling APIs, business logic, and secure data flows for the mobile application.
 • Architected and managed the Supabase (PostgreSQL) database, including schema design, auth integration, and performance-optimized queries.`,
-      href: "",
-      logoUrl: "",
+      href: "https://www.getkurma.com",
+      logoUrl: "./Logo - Curved.png",
     },
     {
       company: "Cyro Labs",
@@ -28,8 +28,8 @@ export default function Experience() {
       description: `• Designed and developed a full-stack blockchain application on Xion, implementing Stripe-like one-touch on-chain payments for seamless user transactions.
 • Built gated NFT content, a referral system, and blockchain-based authentication and profiles, enabling secure access control and user identity management.
 • Led end-to-end development from architecture to deployment, integrating smart contracts with the frontend to deliver a smooth Web3 user experience.`,
-      href: "",
-      logoUrl: "",
+      href: "https://cyrostudios.com/",
+      logoUrl: "./cyro_studios_logo.jpeg",
     },
   ];
 
