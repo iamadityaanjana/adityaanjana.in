@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: "Slate",
     description: "Built a collaborative note-taking app, supports multiple users at once along with custom cursors to show the user activity.",
     status: "Live",
-    liveLink: "https://slate.adityaanjana.in",
+    liveLink: "https://github.com/iamadityaanjana",
     githubLink: "https://github.com/iamadityaanjana",
     image: '/slate.png',
     tags: [
