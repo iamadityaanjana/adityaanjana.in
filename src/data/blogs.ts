@@ -2,6 +2,17 @@ import { BlogPost } from '@/types/blog'
 
 export const blogs: BlogPost[] = [
   {
+    id: 'load-balancing',
+    slug: 'load-balancing',
+    title: 'Load Balancing — A Visual Deep Dive',
+    description: 'From round-robin to least-connections, health checks to L4 vs L7 — everything you need to understand load balancing, with interactive demos.',
+    date: '2026-05-05',
+    author: 'Aditya Anjana',
+    tags: ['systems', 'infrastructure', 'backend', 'networking'],
+    readTime: '12 min read',
+    content: '__CUSTOM__',
+  },
+  {
     id: 'being-judgemental',
     slug: 'being-judgemental',
     title: 'Being Judgemental',

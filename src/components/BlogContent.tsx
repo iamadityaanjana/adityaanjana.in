@@ -1,12 +1,18 @@
-import { FC } from 'react'
+import { FC, Suspense, lazy } from 'react'
 import { BlogPost } from '@/types/blog'
 import ReactMarkdown from 'react-markdown'
+
+const CUSTOM_COMPONENTS: Record<string, ReturnType<typeof lazy>> = {
+  'load-balancing': lazy(() => import('@/components/blogs/LoadBalancingBlog')),
+}
 
 interface BlogContentProps {
   blog: BlogPost
 }
 
 export const BlogContent: FC<BlogContentProps> = ({ blog }) => {
+  const CustomComponent = CUSTOM_COMPONENTS[blog.id]
+
   return (
     <article className="prose prose-neutral dark:prose-invert prose-headings:font-medium max-w-none px-4 md:px-0">
       <header className="mb-8 md:mb-12 not-prose">
@@ -20,8 +26,8 @@ export const BlogContent: FC<BlogContentProps> = ({ blog }) => {
         </div>
         <div className="flex flex-wrap gap-2 mt-4 md:mt-6">
           {blog.tags.map(tag => (
-            <span 
-              key={tag} 
+            <span
+              key={tag}
               className="px-2 sm:px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-full text-xs whitespace-nowrap"
             >
               {tag}
@@ -29,22 +35,28 @@ export const BlogContent: FC<BlogContentProps> = ({ blog }) => {
           ))}
         </div>
       </header>
-      
-      <div className="content prose-sm sm:prose-base md:prose-lg">
-        <ReactMarkdown
-          components={{
-            p: ({ children }) => <p className="mb-4 leading-relaxed">{children}</p>,
-            h1: ({ children }) => <h1 className="text-3xl font-bold mt-8 mb-4">{children}</h1>,
-            h2: ({ children }) => <h2 className="text-2xl font-semibold mt-6 mb-3">{children}</h2>,
-            h3: ({ children }) => <h3 className="text-xl font-medium mt-4 mb-2">{children}</h3>,
-            ul: ({ children }) => <ul className="list-disc pl-6 mb-4">{children}</ul>,
-            ol: ({ children }) => <ol className="list-decimal pl-6 mb-4">{children}</ol>,
-            li: ({ children }) => <li className="mb-1">{children}</li>,
-          }}
-        >
-          {blog.content}
-        </ReactMarkdown>
-      </div>
+
+      {CustomComponent ? (
+        <Suspense fallback={<div className="not-prose text-sm text-neutral-400 py-8">Loading…</div>}>
+          <CustomComponent />
+        </Suspense>
+      ) : (
+        <div className="content prose-sm sm:prose-base md:prose-lg">
+          <ReactMarkdown
+            components={{
+              p: ({ children }) => <p className="mb-4 leading-relaxed">{children}</p>,
+              h1: ({ children }) => <h1 className="text-3xl font-bold mt-8 mb-4">{children}</h1>,
+              h2: ({ children }) => <h2 className="text-2xl font-semibold mt-6 mb-3">{children}</h2>,
+              h3: ({ children }) => <h3 className="text-xl font-medium mt-4 mb-2">{children}</h3>,
+              ul: ({ children }) => <ul className="list-disc pl-6 mb-4">{children}</ul>,
+              ol: ({ children }) => <ol className="list-decimal pl-6 mb-4">{children}</ol>,
+              li: ({ children }) => <li className="mb-1">{children}</li>,
+            }}
+          >
+            {blog.content}
+          </ReactMarkdown>
+        </div>
+      )}
     </article>
   )
 }
