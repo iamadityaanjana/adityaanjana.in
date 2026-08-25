@@ -1,8 +1,0 @@
-{
-    "build": {
-      "env": {
-        "PNPM_INSTALL_FLAGS": "--no-frozen-lockfile"
-      }
-    }
-  }
-  
