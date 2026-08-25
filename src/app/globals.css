@@ -148,17 +148,32 @@
   animation: fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-/* Theme toggle — circle-expand view transition */
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation: none;
   mix-blend-mode: normal;
 }
 
 ::view-transition-old(root) {
   z-index: 1;
+  animation: none;
 }
 
 ::view-transition-new(root) {
   z-index: 9999;
+  animation: theme-circle 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes theme-circle {
+  from {
+    clip-path: circle(0px at var(--vt-x) var(--vt-y));
+  }
+  to {
+    clip-path: circle(var(--vt-r) at var(--vt-x) var(--vt-y));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-new(root) {
+    animation: none;
+  }
 }

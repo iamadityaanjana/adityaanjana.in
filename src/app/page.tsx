@@ -1,6 +1,5 @@
 'use client'
 
-import GitHubCalender from 'react-github-calendar';
 import {ModeToggle} from "@/components/theme-toggle"
 import Footer from "@/components/Footer"
 import OnekoCat from "@/components/OnekoCat"
@@ -29,7 +28,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <OnekoCat />
-      <div className="flex flex-col items-start px-6 md:px-12 pt-4 md:pt-6 space-y-8 md:space-y-12 max-w-3xl w-full mx-auto">
+      <div className="flex flex-col items-start px-6 md:px-12 pt-4 md:pt-6 space-y-8 md:space-y-12 max-w-3xl w-full min-w-0 mx-auto">
         <div className="w-full flex justify-end items-center gap-4">
           <Link href={"/projects"} className="text-md md:text-lg hover:underline">
             projects
@@ -97,8 +96,10 @@ export default function Home() {
         </div>
 
                 
-        <h2 className="text-xl md:text-2xl font-medium mb-8">Github Activity</h2>
-        <GithubCalendar username="iamadityaanjana" />
+        <div className="w-full min-w-0">
+          <h2 className="text-xl md:text-2xl font-medium mb-4">Github Activity</h2>
+          <GithubCalendar username="iamadityaanjana" />
+        </div>
 
 
         <div className="w-full">

@@ -12,6 +12,15 @@ interface ExperienceItem {
 export default function Experience() {
   const experiences: ExperienceItem[] = [
     {
+      company: "Demandbase",
+      position: "SDE",
+      duration: "Aug 2026 – Present",
+      description: `• Building backend services in Java and Spring Boot.
+• Working on scalable systems: APIs, service design, and keeping things reliable as load grows.`,
+      href: "https://www.demandbase.com",
+      logoUrl: "/demandbase.png",
+    },
+    {
       company: "Kurma",
       position: "Co-founder",
       duration: "Sep 2025 – Present",
