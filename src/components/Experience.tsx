@@ -15,8 +15,7 @@ export default function Experience() {
       company: "Demandbase",
       position: "SDE",
       duration: "Aug 2026 – Present",
-      description: `• Building backend services in Java and Spring Boot.
-• Working on scalable systems: APIs, service design, and keeping things reliable as load grows.`,
+      description: `• Java, Spring Boot, scalable systems. Mostly gasping and hoping I don't break anything.`,
       href: "https://www.demandbase.com",
       logoUrl: "/demandbase.png",
     },
@@ -24,9 +23,7 @@ export default function Experience() {
       company: "Kurma",
       position: "Co-founder",
       duration: "Sep 2025 – Present",
-      description: `• Building a Flutter app end-to-end, translating product requirements into scalable, high-performance mobile features.
-• Designed and implemented a NestJS backend, handling APIs, business logic, and secure data flows for the mobile application.
-• Architected and managed the Supabase (PostgreSQL) database, including schema design, auth integration, and performance-optimized queries.`,
+      description: `• Testing in production.`,
       href: "https://www.getkurma.com",
       logoUrl: "./Logo - Curved.png",
     },
@@ -34,9 +31,7 @@ export default function Experience() {
       company: "Cyro Labs",
       position: "Blockchain Application Developer",
       duration: "Jun 2025 – Jul 2025",
-      description: `• Designed and developed a full-stack blockchain application on Xion, implementing Stripe-like one-touch on-chain payments for seamless user transactions.
-• Built gated NFT content, a referral system, and blockchain-based authentication and profiles, enabling secure access control and user identity management.
-• Led end-to-end development from architecture to deployment, integrating smart contracts with the frontend to deliver a smooth Web3 user experience.`,
+      description: `• Led one more useless blockchain product all the way to deployment.`,
       href: "https://cyrostudios.com/",
       logoUrl: "./cyro_studios_logo.jpeg",
     },
