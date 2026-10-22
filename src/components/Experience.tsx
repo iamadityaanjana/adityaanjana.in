@@ -24,7 +24,7 @@ export default function Experience() {
       position: "Co-founder",
       duration: "Sep 2025 – Present",
       description: `• Testing in production.`,
-      href: "https://www.getkurma.com",
+      href: "https://www.kurmahealth.com/?utm_source=adityaanjana.in",
       logoUrl: "./Logo - Curved.png",
     },
     {
