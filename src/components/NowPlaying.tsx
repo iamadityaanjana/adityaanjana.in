@@ -71,7 +71,10 @@ export default function NowPlaying() {
 
   if (!data || !data.isPlaying) {
     return (
-      <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-500">
+      <div
+        data-build="now-idle"
+        className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-500"
+      >
         <SpotifyIcon className="w-4 h-4" />
         <span>Not playing</span>
       </div>
@@ -83,12 +86,16 @@ export default function NowPlaying() {
       href={data.songUrl}
       target="_blank"
       rel="noopener noreferrer"
+      data-build="now-card"
       className="group flex flex-col w-full rounded-xl bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors p-4 gap-4"
     >
-      {/* Top row: album art + info */}
       <div className="flex items-center gap-4">
         {data.albumImageUrl ? (
-          <div className="relative w-16 h-16 shrink-0">
+          <div
+            data-build="now-art"
+            data-src={data.albumImageUrl}
+            className="relative w-16 h-16 shrink-0"
+          >
             <Image
               src={data.albumImageUrl}
               alt={data.album || 'Album art'}
@@ -98,33 +105,48 @@ export default function NowPlaying() {
             />
           </div>
         ) : (
-          <div className="w-16 h-16 shrink-0 rounded-lg bg-neutral-300 dark:bg-neutral-600" />
+          <div data-build="now-art" className="w-16 h-16 shrink-0 rounded-lg bg-neutral-300 dark:bg-neutral-600" />
         )}
 
-        {/* Title / artist / spotify badge — vertically centered */}
         <div className="flex flex-col justify-center min-w-0 flex-1">
           <div className="flex items-center gap-1.5 mb-1">
             <SpotifyIcon className="w-3.5 h-3.5 text-green-500 shrink-0" />
-            <span className="text-xs text-green-500 font-semibold tracking-wide">Now Playing</span>
+            <span
+              data-build="now-badge"
+              className="text-xs text-green-500 font-semibold tracking-wide"
+            >
+              Now Playing
+            </span>
           </div>
-          <p className="text-base font-semibold text-neutral-900 dark:text-neutral-100 truncate leading-tight">
+          <p
+            data-build="now-title"
+            className="text-base font-semibold text-neutral-900 dark:text-neutral-100 truncate leading-tight"
+          >
             {data.title}
           </p>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400 truncate mt-0.5">
+          <p
+            data-build="now-artist"
+            className="text-sm text-neutral-500 dark:text-neutral-400 truncate mt-0.5"
+          >
             {data.artist}
           </p>
         </div>
       </div>
 
-      {/* Progress bar + timestamps */}
       <div className="flex flex-col gap-1.5 w-full">
-        <div className="w-full h-1.5 bg-neutral-300 dark:bg-neutral-600 rounded-full overflow-hidden">
+        <div
+          data-build="now-progress"
+          className="w-full h-1.5 bg-neutral-300 dark:bg-neutral-600 rounded-full overflow-hidden"
+        >
           <div
             className="h-full bg-green-500 rounded-full transition-none"
             style={{ width: `${percent}%` }}
           />
         </div>
-        <div className="flex justify-between text-xs text-neutral-400 dark:text-neutral-500 tabular-nums">
+        <div
+          data-build="now-time"
+          className="flex justify-between text-xs text-neutral-400 dark:text-neutral-500 tabular-nums"
+        >
           <span>{formatMs(progress)}</span>
           <span>{formatMs(data.durationMs ?? 0)}</span>
         </div>

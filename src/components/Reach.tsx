@@ -26,8 +26,8 @@ export default function Reach() {
   ];
 
   return (
-    <div className="flex flex-wrap gap-2">
-      {socialLinks.map((link) => (
+    <div data-build="contact-links" className="flex flex-wrap gap-2">
+      {socialLinks.map((link, i) => (
       <Button
         asChild
         key={link.name}
@@ -38,6 +38,7 @@ export default function Reach() {
         href={link.url}
         target="_blank"
         rel="noopener noreferrer"
+        data-build={`reach-${i}`}
         >
           {link.name}
         </a>

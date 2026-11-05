@@ -40,9 +40,13 @@ export default function Experience() {
   return (
     <div className="space-y-8 mb-12">
       {experiences.map((exp, index) => (
-        <div key={`${exp.company}-${index}`} className="flex gap-4 pb-6 border-b border-neutral-200 dark:border-neutral-800 last:border-b-0 last:pb-0">
+        <div
+          key={`${exp.company}-${index}`}
+          data-build={`job-${index}`}
+          className="flex gap-4 pb-6 border-b border-neutral-200 dark:border-neutral-800 last:border-b-0 last:pb-0"
+        >
           {exp.logoUrl && (
-            <Avatar className="border size-12 bg-muted-background dark:bg-foreground shrink-0">
+            <Avatar data-build={`joblogo-${index}`} className="border size-12 bg-muted-background dark:bg-foreground shrink-0">
               <AvatarImage
                 src={exp.logoUrl}
                 alt={exp.company}
@@ -52,7 +56,7 @@ export default function Experience() {
             </Avatar>
           )}
           
-          <div className="flex-1 space-y-2">
+          <div data-build={`jobcopy-${index}`} className="flex-1 space-y-2">
             <div className="flex justify-between items-start gap-4">
               <div className="flex-1">
                 {exp.href ? (

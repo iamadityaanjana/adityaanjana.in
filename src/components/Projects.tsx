@@ -71,11 +71,12 @@ const ProjectCard = ({ project }: { project: ProjectCardData }) => {
   return (
     <div 
       onClick={handleCardClick}
+      data-build={`p-${project.id}`}
       className="group flex flex-col border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer"
     >
       
       {/* Top Half: Image & Background Area */}
-      <div className="relative h-48 sm:h-56 w-full overflow-hidden bg-neutral-900 flex items-center justify-center p-6">
+      <div data-build={`pimg-${project.id}`} className="relative h-48 sm:h-56 w-full overflow-hidden bg-neutral-900 flex items-center justify-center p-6">
         
         {/* Default Dark Background */}
         <div className="absolute inset-0 bg-neutral-900 z-0 transition-opacity duration-500 group-hover:opacity-0" />
@@ -120,7 +121,7 @@ const ProjectCard = ({ project }: { project: ProjectCardData }) => {
       </div>
       
       {/* Bottom Half: Content */}
-      <div className="p-5 flex flex-col gap-3 flex-1 border-t border-neutral-100 dark:border-neutral-700">
+      <div data-build={`pbody-${project.id}`} className="p-5 flex flex-col gap-3 flex-1 border-t border-neutral-100 dark:border-neutral-700">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-bold text-neutral-900 dark:text-neutral-200">{project.title}</h3>
           
@@ -195,7 +196,7 @@ export default function ProjectsSection() {
     <section className="py-8 md:py-12">
       <div>
         <div className="mb-6 md:mb-8">
-            <h2 className="text-xl md:text-2xl font-medium text-neutral-900 dark:text-neutral-200">Projects.</h2>
+            <h2 data-build="projects-title" className="text-xl md:text-2xl font-medium text-neutral-900 dark:text-neutral-200">Projects.</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {transformedProjects.map((project) => (
